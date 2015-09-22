@@ -33,6 +33,10 @@
 % does not look nice, try deleting the line with the fontenc.
 \usepackage{helvet}
 
+%Custom packages
+\usepackage{graphicx}
+\graphicspath{{graphics/}}
+
 % colored hyperlinks
 \newcommand{\chref}[2]{%
   \href{#1}{{\usebeamercolor[bg]{AAUsidebar}#2}}%
@@ -166,6 +170,7 @@ The result of this paper is a model for controlling information flow: \alert{Dec
 \begin{frame}{DLM Basics}{Labels}
 	
 \end{frame}
+%%%%%%%%%%%%%%%%
 
 \subsection{Operations}
 \begin{frame}{DLM Basics}{Operations}
@@ -174,11 +179,15 @@ The result of this paper is a model for controlling information flow: \alert{Dec
 
 \section{Example}
 \begin{frame}{Example}{}
+	\centering
+	\includegraphics[height=.7\paperheight]{hospital_example.png}
 \end{frame}
 %%%%%%%%%%%%%%%%
 
 \subsection{Code Example}
 \begin{frame}{Example}{Code Example}
+	\centering
+	\includegraphics[height=.7\paperheight]{passwordcheker_example.png}
 \end{frame}
 %%%%%%%%%%%%%%%%
 
