@@ -156,7 +156,7 @@ The result of this paper is a model for controlling information flow: \alert{Dec
 \subsection{Terminology}
 \begin{frame}{DLM Basics}{Terminology}
 	\begin{description}
-		\item <1-> [Principals] represent users and other authoritative entities.
+		\item <1-> [Principals] represent users and other authoritative entities (e.g. groups or roles).
 		\item <2-> [Values] are entities computations can manipulate.
 		\item <3-> [Slots] are value-holders (e.g. variables, objects, and other storage locations).
 		\item <4-> [Input channels] are read-only sources that allow information to enter the system.
@@ -168,18 +168,28 @@ The result of this paper is a model for controlling information flow: \alert{Dec
 
 \subsection{Labels}
 \begin{frame}{DLM Basics}{Labels}
-	
+	\only<1->{A label $\mathbf{L}$ is a set of owners, where each owner denotes its readers, e.g.:
+	\[ \{ o_1 : r_1, r_2; o_2 : r_2, r_3 \} \]
+	where $o_1, o_2, r_1, r_2, r_3$ are principals.}
+	\\[0.25cm]
+	\only<2->{The effective reader set of a label is the intersection of every reader, for $\mathbf{L}$ it is $\{r_2\}$.}
 \end{frame}
 %%%%%%%%%%%%%%%%
 
-\subsection{Principles}
-\begin{frame}{DLM Basics}{Principles}
-	
-\end{frame}
-%%%%%%%%%%%%%%%%
-
-\subsection{Operations}
-\begin{frame}{DLM Basics}{Operations}
+\subsection{Key Principles}
+\begin{frame}{DLM Basics}{Key Principles}
+	\begin{itemize}
+		\item <1-> Labels are comparable:
+		\begin{itemize}
+			\item <1-> $\mathbf{L_1} \sqsubseteq \mathbf{L_2}$ signifies that $\mathbf{L_2}$ is at least as restrictive as $\mathbf{L_1}$.
+		\end{itemize}
+		\item <2-> Labels can be joined:
+		\begin{itemize}
+			\item <2-> $\mathbf{L_1} \sqcup \mathbf{L_2}$ results in a join of owners and intersection of readers.
+		\end{itemize}
+		\item <3-> Principals can act for other principals.
+		\item <4-> Relabeling can be done, further restricting or declassifying.
+	\end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%
 
@@ -199,16 +209,35 @@ The result of this paper is a model for controlling information flow: \alert{Dec
 
 \section{Advanced}
 \begin{frame}{Advanced}{}
+	\begin{itemize}
+		\item Label polymorphism
+		\item Run-time labels (\texttt{lb} type)
+		\item Protected types (\texttt{protected[T]})
+		\item Inferred labels
+	\end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%
 
 \section{Conclusion}
 \begin{frame}{Conclusion}{}
+	\begin{itemize}
+		\item <1-> Decentralized Label Model
+		\item <2-> Control of information flow
+		\item <3-> Static and dynamic label checking
+		\item <4-> Possible to extend existing programming languages
+	\end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%
 
 \subsection{Future Works}
 \begin{frame}{Conclusion}{Future Works}
+	\begin{itemize}
+		\item <1-> Actual implementation (JIF -- dead)
+		\item <2-> Support for user-defined data abstractions
+		\item <3-> Formal proofs
+		\item <4-> Network systems
+		\item <5-> Threading
+	\end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%
 
