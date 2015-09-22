@@ -103,8 +103,8 @@ The result of this paper is a model for controlling information flow: \alert{Dec
 \begin{frame}{Introduction}{What it is not}
 	\only<1->{It is not:}
 	\begin{itemize}
-		\item <2-> Access Control (inter-application communication)
-		\item <3-> Authentication, Authorization, Confidentiality, etc.
+		\item <2-> Access Control
+		\item <3-> Authentication, Authorization, Confidentiality, Integrity.
 	\end{itemize}
 	
 	\only<4->{This means that DLM will \alert{not} ensure:}
@@ -138,12 +138,14 @@ The result of this paper is a model for controlling information flow: \alert{Dec
 		\item <2-> decentralized
 		\item <3-> less restrictive of allowed computations
 		\item <4-> not completely disallowing inter-application communication
+		\item <5-> meant to extend current programming languages with data flow annotations
 	\end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%
 
 \section{DLM Basics}
 \begin{frame}{DLM Basics}{}
+	DLM provides both static and dynamic checking of data flow.
 \end{frame}
 %%%%%%%%%%%%%%%%\textsl{}
 
