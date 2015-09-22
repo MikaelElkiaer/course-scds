@@ -75,7 +75,7 @@
 %\pgfdeclareimage[height=1.5cm]{titlepagelogo2}{graphics/aau_logo_new} % placed on the title page
 \titlegraphic{% is placed on the bottom of the title page
   \pgfuseimage{titlepagelogo}
-%  \hspace{1cm}\pgfuseimage{titlepagelogo2}
+%  \hspace{1cm}\pgfuseimage{titlepagelogo2}\textsl{}
 }
 
 
@@ -107,10 +107,10 @@ The result of this paper is a model for controlling information flow: \alert{Dec
 		\item <3-> Authentication, Authorization, Confidentiality, etc.
 	\end{itemize}
 	
-	\only<4->{This means that DLM will not ensure:}
+	\only<4->{This means that DLM will \alert{not} ensure:}
 	\begin{itemize}
 		\item <5-> secure communication between applications
-		\item <6-> limited application access to data once released
+		\item <6-> limited access to data once released
 	\end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%
@@ -137,6 +137,7 @@ The result of this paper is a model for controlling information flow: \alert{Dec
 	\begin{itemize}
 		\item <2-> decentralized
 		\item <3-> less restrictive of allowed computations
+		\item <4-> not completely disallowing inter-application communication
 	\end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%
@@ -164,8 +165,8 @@ The result of this paper is a model for controlling information flow: \alert{Dec
 	
 \end{frame}
 
-\subsection{Functions}
-\begin{frame}{DLM Basics}{Functions}
+\subsection{Operations}
+\begin{frame}{DLM Basics}{Operations}
 \end{frame}
 %%%%%%%%%%%%%%%%
 
@@ -179,11 +180,20 @@ The result of this paper is a model for controlling information flow: \alert{Dec
 \end{frame}
 %%%%%%%%%%%%%%%%
 
-\section{Definitions}
-\begin{frame}{Definitions}{}
+\section{Advanced}
+\begin{frame}{Advanced}{}
 \end{frame}
 %%%%%%%%%%%%%%%%
 
+\section{Conclusion}
+\begin{frame}{Conclusion}{}
+\end{frame}
+%%%%%%%%%%%%%%%%
+
+\subsection{Future Works}
+\begin{frame}{Conclusion}{Future Works}
+\end{frame}
+%%%%%%%%%%%%%%%%
 
 {\aauwavesbg
 \begin{frame}[plain,noframenumbering]
