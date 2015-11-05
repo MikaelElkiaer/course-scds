@@ -134,7 +134,39 @@
 
 \section{Bell-LaPadula}
 
+\begin{frame}{Bell-LaPadula}{}
+	\begin{itemize}
+		\item Proposed by Bell and LaPadula in 1973
+		\item Security policy model
+		\item Designed for military use
+	\end{itemize}
+\end{frame}
 
+\begin{frame}
+	\frametitle{Terminology}
+	
+	\begin{description}
+		\item[Object] Data or program.
+			\begin{description}
+				\item[Classification] Minimum security level.
+				\item[Category] Security group(s).
+			\end{description}
+		\item[Subject] Person or program.
+			\begin{description}
+				\item[Clearance] Maximum security level.
+				\item[Need-to-know] Security group(s).
+			\end{description}
+	\end{description}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Access rules}
+	
+	\begin{description}
+		\item[Simple security:] access is granted only if the subject's clearance is \textit{greater} than the object's classification and the subject's need-to-know \textit{includes} the object's category(ies)
+		\item[*-property:] write access is granted only if the output object's classification is \textit{greater} than the classification of all input objects, and its category \textit{includes} the category(ies) of all input objects.
+	\end{description}
+\end{frame}
 
 
 {\aauwavesbg
