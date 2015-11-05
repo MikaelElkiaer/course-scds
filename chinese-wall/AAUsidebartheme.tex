@@ -205,6 +205,37 @@
 	\end{itemize}
 \end{frame}
 
+\subsection{Abstract Example}
+\begin{frame}
+	
+\end{frame}
+
+\subsection{Access rules}
+\begin{frame}
+	\frametitle{Access rules}
+	
+	\begin{columns}
+		\begin{column}{.45\textwidth}
+			\begin{block}{Simple security}
+				Access is only granted if the object requested
+				\begin{enumerate}
+					\item is in the \textit{same company dataset} as an object already accessed by that subject, i.e. within the Wall, \textit{or}
+					\item belongs to an \textit{entirely different conflict of interest class}.
+				\end{enumerate}
+			\end{block}
+		\end{column}
+		\begin{column}{.45\textwidth}
+			\begin{block}{*-property}
+				Write access is only permitted if
+				\begin{enumerate}
+					\item access is permitted by the simple security rule, and
+					\item no object can be read which is in a different company dataset to the one for which write access is requested and contains unsanitized information.
+				\end{enumerate}
+			\end{block}
+		\end{column}
+	\end{columns}
+\end{frame}
+
 
 {\aauwavesbg
 \begin{frame}[plain,noframenumbering]
