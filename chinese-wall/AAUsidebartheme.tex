@@ -224,7 +224,6 @@
 \begin{frame}
 	\frametitle{Hierarchical Example}
 	
-	Users $Johnny, NotJohnny$
 	\begin{tikzpicture}[scale=0.7]
 	\node (v3) at (-2,0) {};
 	\node (v2) at (-3,0) {};
@@ -233,11 +232,11 @@
 	\node (v4) at (-1,0) {};
 	\node (v5) at (-1,-1) {};
 	\draw (v1) -- (v2) -- (v3) -- (v4) -- (v5);
-	\node (v7) at (-2,1) {DKB};
+	\node (v7) at (-2,1) {DKB\footnote{Danske Bank}};
 	\draw (v6) -- (v3) -- (v7);
 	
 	\node (v14) at (0,1) {};
-	\node (v13) at (2,1) {SOB};
+	\node (v13) at (2,1) {SOB\footnote{Some Other Bank}};
 	\node (v10) at (2,0) {};
 	\node (v9) at (1,0) {};
 	\node (v8) at (1,-1) {};
@@ -273,6 +272,10 @@
 	\node (v31) at (4,3) {All objects};
 	\draw  (v30) edge (v31);
 	\end{tikzpicture}
+	
+	\vfill
+	
+	DKB employees $Johnny, \lnot Johnny$
 \end{frame}
 
 \subsection{Access rules}
