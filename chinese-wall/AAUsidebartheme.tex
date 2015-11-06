@@ -224,7 +224,7 @@
 \begin{frame}
 	\frametitle{Hierarchical Example}
 	
-	Users $X, Y$
+	Users $Johnny, NotJohnny$
 	\begin{tikzpicture}[scale=0.7]
 	\node (v3) at (-2,0) {};
 	\node (v2) at (-3,0) {};
@@ -233,11 +233,11 @@
 	\node (v4) at (-1,0) {};
 	\node (v5) at (-1,-1) {};
 	\draw (v1) -- (v2) -- (v3) -- (v4) -- (v5);
-	\node (v7) at (-2,1) {A};
+	\node (v7) at (-2,1) {DKB};
 	\draw (v6) -- (v3) -- (v7);
 	
 	\node (v14) at (0,1) {};
-	\node (v13) at (2,1) {B};
+	\node (v13) at (2,1) {SOB};
 	\node (v10) at (2,0) {};
 	\node (v9) at (1,0) {};
 	\node (v8) at (1,-1) {};
@@ -246,14 +246,14 @@
 	\node (v11) at (3,0) {};
 	\draw (v8) -- (v9) -- (v10) -- (v11) -- (v12);
 	\draw (2,-1) -- (v10) -- (v13) -- (v14) -- (v7);
-	\node (v15) at (0,2) {C};
+	\node (v15) at (0,2) {Banks};
 	\draw  (v14) edge (v15);
 		
 	\node (v30) at (4,2) {};
-	\node (v40)at (8,2) {D};
+	\node (v40)at (8,2) {Petrol};
 	\node (v23) at (8,1) {};
-	\node (v22) at (6,1) {K};
-	\node (v24) at (10,1) {J};
+	\node (v22) at (6,1) {F24};
+	\node (v24) at (10,1) {Q8};
 	\node (v25) at (10,0) {};
 	\node (v28) at (9,0) {};
 	\node (v27) at (9,-1) {};
@@ -270,7 +270,7 @@
 	\draw (v21) -- (v18) -- (v22) -- (v23) -- (v24) -- (v25) -- (v26);
 	\draw (v27) -- (v28) -- (v25) -- (v29) -- (11,-1);
 	\draw (v23) -- (v40) -- (v30) -- (v15);
-	\node (v31) at (4,3) {O};
+	\node (v31) at (4,3) {All objects};
 	\draw  (v30) edge (v31);
 	\end{tikzpicture}
 \end{frame}
