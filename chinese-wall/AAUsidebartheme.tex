@@ -167,10 +167,14 @@
 \begin{frame}
 	\frametitle{Access rules}
 	
-	\begin{description}
-		\item[Simple security:] access is granted only if the subject's clearance is \textit{greater} than the object's classification and the subject's need-to-know \textit{includes} the object's category(ies)
-		\item[*-property:] write access is granted only if the output object's classification is \textit{greater} than the classification of all input objects, and its category \textit{includes} the category(ies) of all input objects.
-	\end{description}
+	\begin{columns}
+		\begin{column}{.45\textwidth}
+			\textbf{Simple security:} access is granted only if the subject's clearance is \textit{greater} than the object's classification and the subject's need-to-know \textit{includes} the object's category(ies).
+		\end{column}
+		\begin{column}{.45\textwidth}
+			\textbf{*-property:} write access is granted only if the output object's classification is \textit{greater} than the classification of all input objects, and its category \textit{includes} the category(ies) of all input objects.
+		\end{column}
+	\end{columns}
 \end{frame}
 
 \subsection{Example}
