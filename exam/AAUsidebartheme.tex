@@ -94,7 +94,18 @@
 
 \begin{frame}
   \frametitle{The Problem}
-
+    The Needham-Schroeder Public Key Protocol (1978):
+    \begin{enumerate}
+      \item $A \rightarrow S : A,B$
+      \item $S \rightarrow A : \{K_b, B\}_{K_s^{-1}}$
+      \item $A \rightarrow B : \{N_a, A\}_{K_b}$
+      \item $B \rightarrow S : B,A$
+      \item $S \rightarrow B : \{K_a, A\}_{K_s^{-1}}$
+      \item $B \rightarrow A : \{N_a, N_b\textcolor{red}{, B}\}_{K_a}$
+      \item $A \rightarrow B : \{N_b\}_{K_b}$
+    \end{enumerate}
+    \vfill
+    Man-in-the-middle attack presented by Gabin Lowe (1995).
 \end{frame}
 
 \begin{frame}
