@@ -1,0 +1,28 @@
+digraph G {
+
+graph[center=true, margin=0.2, nodesep=0.1, ranksep=0.3]
+node[shape=circle];
+
+  root[label=<r>];
+
+    r1[label=<R'>];
+    root->r1[label=<F>];
+
+      r1n[label=<...>,shape=none];
+      r1->r1n;
+
+      r[label=<R>];
+      r1->r[label=<F<SUB>0</SUB>>];
+
+        f1[label=<...>,shape=none]
+        r->f1[label=<F<SUB>1</SUB>>];
+
+        fi[label=<...>,shape=none];
+        r->fi[label=<&nbsp;...>];
+
+        fn[label=<...>,shape=none];
+        r->fn[label=<F<SUB>n</SUB>>];
+
+      r2n[label=<...>,shape=none];
+      r1->r2n;
+}

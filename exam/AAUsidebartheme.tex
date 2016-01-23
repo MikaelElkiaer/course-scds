@@ -159,6 +159,27 @@
   }
 \end{frame}
 
+\begin{frame}
+  \frametitle{Definition 2 (Derivability)}
+
+  \begin{columns}
+    \begin{column}{.6\textwidth}
+      Let $F$ be a closed fact.
+      Let $B$ be a set of rules.
+      $F$ is derivable from $B$ if and only if there exists a finite tree defined as follows:
+      \begin{enumerate}
+        \item Its nodes (except the root) are labelled by rules $R \in B$;
+        \item Its edges are labelled by closed facts;
+        \item If the tree contains a node labelled by $R$ with one incoming edge labelled by $F_0$ and $n$ outgoing edges labelled by $F_1, \dots, F_n$, then $R \Rightarrow \{F_1, \dots, F_n\} \rightarrow F_0$.
+        \item The root has one outgoing edge, labelled by $F$.
+      \end{enumerate}
+    \end{column}
+    \begin{column}{.4\textwidth}
+      \includegraphics[width=\textwidth]{derivation_tree}
+    \end{column}
+  \end{columns}
+\end{frame}
+
 %%%%%%%%%%%%
 {\aauwavesbg
 \begin{frame}[plain,noframenumbering]
