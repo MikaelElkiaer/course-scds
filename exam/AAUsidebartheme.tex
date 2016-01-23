@@ -159,6 +159,24 @@
   }
 \end{frame}
 
+\newcommand{\fun}[1]{\textbf{#1}}
+
+\begin{frame}
+  \frametitle{Primitives}
+
+  \begin{tabular}{lll}
+    \multicolumn{2}{l}{$sk_A[]$, $sk_B[]$} \\
+    \multicolumn{2}{l}{$k[x_1, \dots, x_n]$} \\[0.5em] \hline
+    \textcolor{blue}{constructor} & \textcolor{blue}{destructor} \\
+    $pk_A = \fun{pk}(sk_A[])$ & \\
+    $\fun{pencrypt}(m, pk(sk))$ & $\fun{decrypt}(\fun{encrypt}(m, pk(sk)), sk) = m$ \\
+    $\fun{sencrypt}(m, k)$ & $\fun{sdecrypt}(\fun{sencrypt}(m, k), k) = m$ \\
+    $\fun{sign}(m, sk)$ & $\fun{getmess}(\fun{sign}(m, sk))$ \\
+    $(\_, \dots, \_)$ & $\fun{\textit{i}th}((x_1, \dots, x_n)) = x_i | i \in \{1, \dots, n\}$ \\
+    $h$ &
+  \end{tabular}
+\end{frame}
+
 \begin{frame}
   \frametitle{Protocol}
 
