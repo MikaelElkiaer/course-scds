@@ -160,6 +160,20 @@
 \end{frame}
 
 \begin{frame}
+  \frametitle{Protocol}
+
+  A protocol can be represented by three sets of rules:
+  \begin{enumerate}
+    \item Rules representing the computation abilities of the attacker\\
+      -- e.g. $attacker(x_1) \land ... \land attacker(x_n) \rightarrow attacker(f(x_1, \dots, x_n))$
+    \item Facts corresponding to initial knowledge of the attacker\\
+      -- e.g. $attacker(A[])$ or $attacker(pk(sk_A[]))$
+    \item Rules representing the protocol itself\\
+      -- e.g. $attacker(M_{j_1}) \land \dots \land attacker(M_{j_n}) \rightarrow attacker(M_i)$.
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}
   \frametitle{Definition 1 (Rule Implication)}
   \centering
 
