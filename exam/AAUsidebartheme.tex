@@ -137,6 +137,27 @@
 
 \subsection{Protocol representation}
 
+\newcommand{\mytab}{\hspace{0.05\textwidth}}
+
+\begin{frame}
+  \frametitle{Syntax}
+  \centering
+
+  {\setlength{\tabcolsep}{20pt}
+    \begin{tabular}{ll}
+      $M, N ::=$ & terms \\
+      \mytab$x$ & \mytab variable \\
+      \mytab$a[M_1, \dots, M_n]$ & \mytab name \\
+      \mytab$f(M_1, \dots, M_n)$ & \mytab function application \\\\
+
+      $F ::=$ & fact \\
+      \mytab$p(M_1, \dots, M_n)$ & \mytab predicate application \\\\
+
+      $R ::=$ & rule \\
+      \mytab$F_1 \land \dots \land F_n \rightarrow F$ & \mytab implication
+    \end{tabular}
+  }
+\end{frame}
 
 %%%%%%%%%%%%
 {\aauwavesbg
