@@ -293,6 +293,27 @@
   $\fun{derivable}(F) = \fun{derivablerec}(\{F\} \rightarrow F, Ø)$.
 \end{frame}
 
+%%%%%%%%%%%%%%%%%
+\section{Conclusion}
+
+\begin{frame}
+  \frametitle{Experimental results}
+  \centering
+
+  {\footnotesize
+  \begin{tabular}{|l|l|r|r|}
+    \hline
+    Protocol & Result & \# Rules & Time (ms) \\ \hline
+    Needham-Schroeder public key & Attack & 14 & 70 \\
+    Needham-Schroeder public key corrected & Secure & 14 & 60 \\
+    Needham-Schroeder shared key & Attack & 47 & 760 \\
+    Needham-Schroeder shared key corrected & Secure & 51 & 1190 \\
+    \multicolumn{4}{|c|}{} \\
+    \multicolumn{4}{|c|}{\dots} \\
+    \multicolumn{4}{|c|}{} \\ \hline
+  \end{tabular}}
+\end{frame}
+
 %%%%%%%%%%%%
 {\aauwavesbg
 \begin{frame}[plain,noframenumbering]
