@@ -280,6 +280,19 @@
   \end{enumerate}
 \end{frame}
 
+\begin{frame}
+  \frametitle{Second phase: backward depth-first search}
+
+  We define $\fun{derivablerec}(R,B'')$ by
+  \begin{enumerate}
+    \item $\fun{derivablerec}(R,B'') = Ø if \exists R' \in B'', R' \Rightarrow R$;
+    \item $\fun{derivablerec}(Ø \rightarrow C, B'') = \{C\}$ otherwise;
+    \item $\fun{derivablerec}(R, B'') = \cup \{\fun{derivablerec}(\fun{elimdup}(R' \circ_{F_0} R), \{R\} \cup B'') R' \in B', F_0$ such that $R' \circ_{F_0} R$ is defined $\}$ otherwise.
+  \end{enumerate}
+  \vspace{1em}
+  $\fun{derivable}(F) = \fun{derivablerec}(\{F\} \rightarrow F, Ø)$.
+\end{frame}
+
 %%%%%%%%%%%%
 {\aauwavesbg
 \begin{frame}[plain,noframenumbering]
