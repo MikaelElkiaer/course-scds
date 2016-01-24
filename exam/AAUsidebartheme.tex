@@ -210,10 +210,10 @@
   \frametitle{Approximations}
 
   \begin{itemize}
-    \item New names are functions of messages previously received, if not altered.
-    \item The same step of a protocol can be completed several times, yielding the same result.\\[3em]
-    \item Correctness still holds.
-    \item Can lead to false attacks.
+    \item New names are functions of messages previously received, unless altered.
+    \item The same step of a protocol can be completed several times, yielding the same result, provided that the previous steps have been completed.\\[3em]
+    \item Correctness still holds -- intuitively, more attacker options and safe, still safe with less options.
+    \item However, can lead to false attacks.
   \end{itemize}
 \end{frame}
 
