@@ -314,6 +314,18 @@
   $\fun{derivable}(F) = \fun{derivablerec}(\{F\} \rightarrow F, Ø)$.
 \end{frame}
 
+\begin{frame}
+  \frametitle{Theorem 2 (Correctness)}
+  \centering
+
+  \parbox{.7\textwidth}{
+    Let $F$ be a closed fact.
+    Let $F'$ such that there exists a substitution $\sigma$ such that $\sigma F' = F$.
+    $F$ is derivable from the rules in $B_0$ if and only if $\exists F'' \in \fun{derivable}(F'), \exists \sigma, F = \sigma F''$.
+    In particular, $F$ is derivable from $B_0$ if and only if $F \in \fun{derivable}(F)$.
+  }
+\end{frame}
+
 %%%%%%%%%%%%%%%%%
 \section{Conclusion}
 
