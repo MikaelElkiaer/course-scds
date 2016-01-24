@@ -266,7 +266,7 @@
   Let $R$ and $R'$ be two rules.
   $R = H \rightarrow C, R' = H' \rightarrow C'$.
   Assume there exists $F_0 \in H'$ such that: $C$ and $F_0$ are unifiable, and $\sigma$ is the most general unifier of $C$ and $F_0$.\\
-  \mytab In this case, we define \\ \myvspace
+  \mytab In this case, we define \myvspace
   \begin{center}
     $R \circ_{F_0} R' = \sigma(H \cup (H' - F_0)) \rightarrow \sigma C'$.
   \end{center}
@@ -276,10 +276,12 @@
 \section{Solving Algorithm}
 
 \begin{frame}
-  \frametitle{First phase: completion of the rule base}
+  \frametitle{First phase: \\
+    completion of the rule base}
 
+  Let $B = \emptyset$ and let $B_0$ be the initial set of rules.
   \begin{enumerate}
-    \item For each $R \in B_0, B \leftarrow \fun{add}(\fun{elimdup}(R)B)$.
+    \item For each $R \in B_0, B \leftarrow \fun{add}(\fun{elimdup}(R), B)$.
     \item Let $R \in B, R = H \rightarrow C$ and $R' \in B, R' = H' \rightarrow C'$.
       Assume that there exists $F_0 \in H'$ such that:
       \begin{itemize}
@@ -292,7 +294,7 @@
         $B \leftarrow \fun{add}(\fun{elimdup}(R \circ_{F_0} R'), B)$.
       \end{center}
       This procedure is executed until a fixed point is reached.
-    \item Let $B' = \{(H \rightarrow C) \in B \forall F \in H, F \in_r S\}$.
+    \item Let $B' = \{(H \rightarrow C) \in B | \forall F \in H, F \in_r S\}$.
   \end{enumerate}
 \end{frame}
 
@@ -307,16 +309,17 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Second phase: backward depth-first search}
+  \frametitle{Second phase: \\
+    backward depth-first search}
 
   We define $\fun{derivablerec}(R,B'')$ by
   \begin{enumerate}
-    \item $\fun{derivablerec}(R,B'') = Ø if \exists R' \in B'', R' \Rightarrow R$;
-    \item $\fun{derivablerec}(Ø \rightarrow C, B'') = \{C\}$ otherwise;
-    \item $\fun{derivablerec}(R, B'') = \cup \{\fun{derivablerec}(\fun{elimdup}(R' \circ_{F_0} R), \{R\} \cup B'') R' \in B', F_0$ such that $R' \circ_{F_0} R$ is defined $\}$ otherwise.
+    \item $\fun{derivablerec}(R,B'') = \emptyset$ if $\exists R' \in B'', R' \Rightarrow R$;
+    \item $\fun{derivablerec}(\emptyset \rightarrow C, B'') = \{C\}$ otherwise;
+    \item $\fun{derivablerec}(R, B'') = \cup \{\fun{derivablerec}(\fun{elimdup}(R' \circ_{F_0} R), \{R\} \cup B'') | R' \in B', F_0$ such that $R' \circ_{F_0} R$ is defined $\}$ otherwise.
   \end{enumerate}
   \vspace{1em}
-  $\fun{derivable}(F) = \fun{derivablerec}(\{F\} \rightarrow F, Ø)$.
+  $\fun{derivable}(F) = \fun{derivablerec}(\{F\} \rightarrow F, \emptyset)$.
 \end{frame}
 
 \begin{frame}
