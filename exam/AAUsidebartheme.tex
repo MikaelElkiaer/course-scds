@@ -260,18 +260,20 @@
   \end{columns}
 \end{frame}
 
+\begin{frame}
+  \frametitle{Definition 3 (Resolution)}
+
+  Let $R$ and $R'$ be two rules.
+  $R = H \rightarrow C, R' = H' \rightarrow C'$.
+  Assume there exists $F_0 \in H'$ such that: $C$ and $F_0$ are unifiable, and $\sigma$ is the most general unifier of $C$ and $F_0$.\\
+  \mytab In this case, we define \\ \myvspace
+  \begin{center}
+    $R \circ_{F_0} R' = \sigma(H \cup (H' - F_0)) \rightarrow \sigma C'$.
+  \end{center}
+\end{frame}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Solving Algorithm}
-
-\begin{frame}
-  \frametitle{Prolog}
-  \centering
-
-  \begin{tabular}{l}
-    $attacker(\fun{pencrypt}(m, \fun{pk}(sk))) \land attacker(sk)$ \\\mytab
-    $\rightarrow attacker(m)$
-  \end{tabular}
-\end{frame}
 
 \begin{frame}
   \frametitle{First phase: completion of the rule base}
