@@ -259,6 +259,27 @@
   \end{tabular}
 \end{frame}
 
+\begin{frame}
+  \frametitle{First phase: completion of the rule base}
+
+  \begin{enumerate}
+    \item For each $R \in B_0, B \leftarrow \fun(add)(\fun{elimdup}(R)B)$.
+    \item Let $R \in B, R = H \rightarrow C$ and $R' \in B, R' = H' \rightarrow C'$.
+      Assume that there exists $F_0 \in H'$ such that:
+      \begin{itemize}
+        \item[a)] $R \circ_{F_0} R'$ is defined;
+        \item[b)] $\forall F \in H, F \in_r S$;
+        \item[c)] $F_0 \not\in_r S$.
+      \end{itemize}
+      In this case, we execute\\
+      \begin{center}
+        $B \leftarrow \fun{add}(\fun{elimdup}(R \circ_{F_0} R'), B)$.
+      \end{center}
+      This procedure is executed until a fixed point is reached.
+    \item Let $B' = \{(H \rightarrow C) \in B \forall F \in H, F \in_r S\}$.
+  \end{enumerate}
+\end{frame}
+
 %%%%%%%%%%%%
 {\aauwavesbg
 \begin{frame}[plain,noframenumbering]
