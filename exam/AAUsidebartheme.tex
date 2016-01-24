@@ -181,7 +181,7 @@
 \begin{frame}
   \frametitle{Abilities of the attacker}
 
-  Assumed the protocol is executed in the presence of an attacker that can:
+  It is assumed that the protocol is executed in the presence of an attacker that can:
   \begin{itemize}
     \item intercept all messages,
     \item compute new messages from the messages it has received, and
@@ -200,7 +200,7 @@
       $attacker(x_1) \land ... \land attacker(x_n) \rightarrow attacker(f(x_1, \dots, x_n))$, \myvspace
       $attacker(M_1) \land \dots \land attacker(M_n) \rightarrow attacker(M)$ \myvspace
     \item Facts corresponding to initial knowledge of the attacker \myvspace
-      $attacker(A[])$, $attacker(pk(sk_A[]))$ \myvspace
+      e.g. $attacker(\fun{pk}(sk_A[]))$ \myvspace
     \item Rules representing the protocol itself \myvspace
       $attacker(M_{j_1}) \land \dots \land attacker(M_{j_n}) \rightarrow attacker(M_i)$.
   \end{enumerate}
