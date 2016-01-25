@@ -200,9 +200,23 @@
       $attacker(x_1) \land ... \land attacker(x_n) \rightarrow attacker(f(x_1, \dots, x_n))$, \myvspace
       $attacker(M_1) \land \dots \land attacker(M_n) \rightarrow attacker(M)$ \myvspace
     \item Facts corresponding to initial knowledge of the attacker \myvspace
-      e.g. $attacker(\fun{pk}(sk_A[]))$ \myvspace
     \item Rules representing the protocol itself \myvspace
       $attacker(M_{j_1}) \land \dots \land attacker(M_{j_n}) \rightarrow attacker(M_i)$.
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Protocol \\
+    Needham-Schroeder Examples}
+
+  \begin{enumerate}
+    \item Computation abilities \myvspace
+      $attacker(m) \land attacker(pk) \rightarrow attacker(\fun{pencrypt}(m, pk))$ \myvspace
+      $attacker(\fun{pencrypt}(m, \fun{pk}(sk))) \land attacker(sk) \rightarrow m$
+    \item Initial facts \myvspace
+      $attacker(\fun{pk}(sk_S[]))$, $attacker(A[])$, $attacker(B[])$
+    \item Protocol rules \myvspace
+      $attacker(x) \rightarrow attacker(\fun{sign}(\fun{pk}(sk_x[]), sk_A[]))$
   \end{enumerate}
 \end{frame}
 
